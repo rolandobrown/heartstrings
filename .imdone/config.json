@@ -21,6 +21,10 @@
   },
   "lists": [
     {
+      "name": "Todo",
+      "hidden": false
+    },
+    {
       "name": "Roadmap",
       "hidden": false
     },
