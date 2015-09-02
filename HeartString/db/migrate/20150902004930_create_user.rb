@@ -1,6 +1,6 @@
-class CreateLovedOnes < ActiveRecord::Migration
+class CreateUsers < ActiveRecord::Migration
   def change
-    create_table :loved_ones do |t|
+    create_table :users do |t|
       t.string :name
       t.datetime :dob
       t.text :bio
