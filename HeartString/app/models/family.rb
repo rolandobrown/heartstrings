@@ -1,3 +1,3 @@
 class Family < ActiveRecord::Base
-  has_many :loved_ones
+  has_many :users
 end

@@ -3,7 +3,7 @@ class CreateKeepsakes < ActiveRecord::Migration
     create_table :keepsakes do |t|
       t.string :name
       t.text :description
-      t.references :loved_one, index: true, foreign_key: true
+      t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end
