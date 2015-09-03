@@ -1,0 +1,86 @@
+## INSPIRATION
+[1 min]
+
+#Intro from Stacey & Rolando
+
+-Loved one, there are things I want to tell you, someday... (message bubble)
+-There is a loved one in my future... (message bubble)
+
+We want to express love...
+We want to receive love...
+We want to belong.
+
+We want to be remembered.
+We want to remember.
+
+We want to prepare our loved ones.
+We want to help others do the same.
+
+Google gave us search..
+Facebook gave us connection...
+We hope Hearstrings can give us keepsakes.
+
+If everyone on the internet is finding and manupilating strings, let's make them a bunch of heartstrings.
+
+#Show video...
+
+## DEMO
+[1 min]
+
+#Who
+Initial Audience: People raising children, or preparing to raise children.
+
+#What
+-Send messages to your loved ones with Hearstrings.
+--Schedule messages for your Loved Ones.
+--See and save messages in your Keepsake.
+
+#How
+-Identify loved one
+--family helper from facebook api
+
+-Store a message (string)
+--Default Mode
+---Who do you want to leave a message for?
+---What message do you want to leave?
+--Help Mode (help? button on the side)
+---Who do you want to leave a message for?
+---What message do you want to leave?
+---What do you want this message to accomplish?
+---How will that be helpful to {name of person}?
+---This is how {person} will see your message? They will be {xxx}  years old? Would you like to change anything?
+
+
+-Schedule a message (string)
+--Default Mode
+---Drop down menu (input field where user can input date)
+--Milestone Mode
+---What circumstance needs to be true for this message to be delivered?
+
+{person} has "Been Born"
+{person} has "Graduated Kindergarten"
+
+--When do you want {person} to receive this message?
+
+-Receive a message (string)
+--by page
+--by email
+--by text
+
+*-Responsive design (Web, Phone)
+
+Problem Identified, Problem Solved
+
+#What we used
+--Ruby
+--Rails
+--Bootstrap (HTML/CSS)
+--Scheduling?
+--Email?
+--Twilio?
+--Facebook api
+**--Youtube api
+
+The Future
+
+-

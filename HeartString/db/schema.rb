@@ -14,15 +14,11 @@
 ActiveRecord::Schema.define(version: 20150902011007) do
 
   create_table "families", force: :cascade do |t|
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "name"
   end
 
-  add_index "families", ["user_id"], name: "index_families_on_user_id"
-
   create_table "keepsakes", force: :cascade do |t|
-    t.string   "name"
+    t.string   "title"
     t.text     "description"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
@@ -37,6 +33,7 @@ ActiveRecord::Schema.define(version: 20150902011007) do
     t.text     "body"
     t.boolean  "draft"
     t.boolean  "deletable"
+    t.boolean  "read"
     t.boolean  "share_with_family"
     t.integer  "user_id"
     t.datetime "created_at",        null: false
@@ -49,6 +46,7 @@ ActiveRecord::Schema.define(version: 20150902011007) do
     t.string   "subject"
     t.text     "body"
     t.datetime "publish_on"
+    t.boolean  "read"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -6,7 +6,7 @@ class CreateMessages < ActiveRecord::Migration
       t.text :body
       t.boolean :draft
       t.boolean :deletable
-      t.datetime :publish_on
+      t.boolean :read
       t.boolean :share_with_family
       t.references :user, index: true, foreign_key: true
 
