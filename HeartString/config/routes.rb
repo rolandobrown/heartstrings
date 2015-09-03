@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+
+root to: "welcome#index"
+
 resources :user
 resources :family
 resources :role
