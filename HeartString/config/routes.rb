@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-
 root to: "welcome#index"
+
+get '/signup', to: "signup#index"
 
 resources :user
 resources :family
