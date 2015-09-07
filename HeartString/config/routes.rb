@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  get 'messages/index'
+
+  get 'messages/show'
+
+  get 'messages/edit'
+
+  get 'messages/create'
+
 root to: "welcome#index"
 
-get '/signup', to: "signup#index"
+get 'signup', to: "signup#index"
 
 resources :user
 resources :family

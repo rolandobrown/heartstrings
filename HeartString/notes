@@ -20,7 +20,7 @@ Google gave us search..
 Facebook gave us connection...
 We hope Hearstrings can give us keepsakes.
 
-If everyone on the internet is finding and manupilating strings, let's make them a bunch of heartstrings.
+If everyone on the internet is finding and manipulating strings, let's make them a bunch of heartstrings.
 
 #Show video...
 
@@ -75,10 +75,11 @@ Problem Identified, Problem Solved
 --Ruby
 --Rails
 --Bootstrap (HTML/CSS)
---Scheduling?
---Email?
---Twilio?
---Facebook api
+--Whenever (Scheduling)
+
+**--Email?
+**--Facebook api
+**--Twilio?
 **--Youtube api
 
 The Future
