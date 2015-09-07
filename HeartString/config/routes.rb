@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root to: "welcome#index"
+
   devise_for :users
   get 'messages/index'
 
@@ -9,16 +11,12 @@ Rails.application.routes.draw do
 
   get 'messages/create'
 
-root to: "welcome#index"
-
-get 'signup', to: "signup#index"
-
-resources :user
-resources :family
-resources :role
-resources :message
-resources :keepsake
-resources :request
+  resources :messages
+  resources :users
+  resources :families
+  resources :roles
+  resources :keepsakes
+  resources :requests
 
 end
 
