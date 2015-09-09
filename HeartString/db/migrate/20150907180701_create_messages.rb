@@ -4,7 +4,6 @@ class CreateMessages < ActiveRecord::Migration
       t.string :subject
       t.text :body
       t.datetime :published_at
-      t.boolean :read
       t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false

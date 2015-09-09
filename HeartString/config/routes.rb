@@ -3,20 +3,16 @@ Rails.application.routes.draw do
   root to: "welcome#index"
 
   devise_for :users
-  get 'messages/index'
-
-  get 'messages/show'
-
-  get 'messages/edit'
-
-  get 'messages/create'
-
   resources :messages
-  resources :users
   resources :families
   resources :roles
   resources :keepsakes
   resources :requests
+
+  get 'messages/index'
+  get 'messages/show'
+  get 'messages/edit'
+  get 'messages/create'
 
 end
 

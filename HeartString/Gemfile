@@ -8,12 +8,21 @@ gem 'sqlite3'
 #add bootstrap
 gem 'bootstrap-sass', '~> 3.3.5'
 
+#add bootstrap 4
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+
+#add sprockets rails
+gem 'sprockets-rails', '~> 2.3.2'
+
+
+#add simple form
+gem 'simple_form'
+
 #add sprockets
-gem 'sprockets', '~> 2.0'
+gem 'sprockets', '~> 3.3.3'
 
 #all file upload
 gem 'carrierwave'
-
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -60,4 +69,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+#Tooltips and popovers depend on tether for positioning. If you use them, add tether to the Gemfile:
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
 end

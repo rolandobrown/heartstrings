@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20150907180701) do
     t.string   "subject"
     t.text     "body"
     t.datetime "published_at"
-    t.boolean  "read"
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
