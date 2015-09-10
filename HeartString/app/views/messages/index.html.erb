@@ -1,14 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>HeartString</h1>
+<h1>HeartStrings</h1>
 
 <table>
-
 
   <tbody>
     <% @messages.each do |message| %>
       <tr>
-        <td><%= message.title %></td>
+        <td><%= message.subject %></td>
         <td><%= message.body %></td>
         <td><%= message.published_at %></td>
         <td><%= link_to 'Show', message %></td>

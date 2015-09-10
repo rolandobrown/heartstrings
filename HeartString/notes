@@ -18,7 +18,7 @@ We want to help others do the same.
 
 Google gave us search..
 Facebook gave us connection...
-We hope Hearstrings can give us keepsakes.
+We hope Heartstrings can give us keepsakes.
 
 If everyone on the internet is finding and manipulating strings, let's make them a bunch of heartstrings.
 
@@ -30,14 +30,13 @@ If everyone on the internet is finding and manipulating strings, let's make them
 #Who
 Initial Audience: People raising children, or preparing to raise children.
 
+#How
+-Identify loved one
+
 #What
 -Send messages to your loved ones with Hearstrings.
 --Schedule messages for your Loved Ones.
 --See and save messages in your Keepsake.
-
-#How
--Identify loved one
---family helper from facebook api
 
 -Store a message (string)
 --Default Mode
@@ -49,7 +48,6 @@ Initial Audience: People raising children, or preparing to raise children.
 ---What do you want this message to accomplish?
 ---How will that be helpful to {name of person}?
 ---This is how {person} will see your message? They will be {xxx}  years old? Would you like to change anything?
-
 
 -Schedule a message (string)
 --Default Mode
@@ -77,11 +75,38 @@ Problem Identified, Problem Solved
 --Bootstrap (HTML/CSS)
 --Whenever (Scheduling) -- Working on it
 
-**--Email?
+**--Sending Email from the app
 **--Facebook api
 **--Twilio?
 **--Youtube api
 
 The Future
 
+
+PRESENTATION
 -
+
+Intro (1min)
+-Intro
+-The Problem
+
+Demo (1.5mins)
+---Creating a Message
+---Seeing the messages you sent
+---Seeing the messages you received
+
+Tech (1.5mins)
+-Code of feature
+---Delivering the message with Whenever
+---Syling the message with Bootstrap
+
+-Challenge, interesting bits..
+---
+---
+
+Next Steps (1min)
+---Sending photos and videos
+---Storing keepsakes
+
+Questions
+???

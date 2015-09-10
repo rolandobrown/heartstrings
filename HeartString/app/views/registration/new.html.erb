@@ -1,0 +1,23 @@
+<h1>Signup</h1>
+<% form_tag '/signup' do %>
+<fieldset>
+
+  <div class="Username">
+  <%= label_tag 'Username' %>
+  <%= text_field_tag 'user[username]' %>
+  </div>
+
+  <div class="">
+  <%= label_tag 'Password' %>
+  <%= password_field_tag 'user[Password]' %>
+  </div>
+
+  <div class="Confirmation">
+  <%= label_tag 'Password Confirmation' %>
+  <%= text_field_tag 'user[password_confirmation]' %>
+  </div>
+</fieldset>
+
+  <% submit %>
+
+<% end %>

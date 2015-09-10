@@ -1,10 +1,9 @@
 class Message < ActiveRecord::Base
   belongs_to :sender, :class_name => "User"
   belongs_to :receiver, :class_name => "User"
-  has_many :keepsakes
 
   scope :draft,     ->{ where(status: "Draft") }
-  scope :send_now, ->{ where(status: "Send Now") }
+  scope :send_now,  ->{ where(status: "Send Now") }
   scope :scheduled, ->{ where(status: "Scheduled") }
 
   attr_accessor :status

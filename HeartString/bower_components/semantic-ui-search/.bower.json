@@ -1,0 +1,40 @@
+{
+  "name": "semantic-ui-search",
+  "description": "Search - Semantic UI",
+  "homepage": "http://www.semantic-ui.com",
+  "author": {
+    "name": "Jack Lukic",
+    "web": "http://www.jacklukic.com"
+  },
+  "ignore": [
+    "docs",
+    "node",
+    "server",
+    "spec",
+    "src",
+    "test"
+  ],
+  "keywords": [
+    "semantic",
+    "ui",
+    "css3",
+    "framework"
+  ],
+  "license": [
+    "http://semantic-ui.mit-license.org/"
+  ],
+  "main": [
+    "search.css"
+  ],
+  "version": "2.1.2",
+  "_release": "2.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.1.2",
+    "commit": "a6bdf1fa90a1c4e513e16a2a4fbc3598f959e0a4"
+  },
+  "_source": "git://github.com/Semantic-Org/UI-Search.git",
+  "_target": "~2.1.2",
+  "_originalSource": "semantic-ui-search",
+  "_direct": true
+}
