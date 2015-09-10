@@ -1,5 +1,5 @@
 change_visibility = (status) ->
-  if status == "Schedule"
+  if status == "Scheduled"
     $(".published-field").show()
   else
     $(".published-field").hide()

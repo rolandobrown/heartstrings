@@ -5,7 +5,9 @@ class Message < ActiveRecord::Base
 
   scope :draft,     ->{ where(status: "Draft") }
   scope :send_now, ->{ where(status: "Send Now") }
-  scope :schedule, ->{ where(status: "Schedule") }
+  scope :scheduled, ->{ where(status: "Scheduled") }
+
+  attr_accessor :status
 
   before_validation :clean_up_status
 

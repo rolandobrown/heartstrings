@@ -11,18 +11,13 @@
 </p>
 
 <p>
-  <strong>Published at:</strong>
+  <strong>Status:</strong>
+  <%= @message.status %>
+</p>
+
+<p>
+  <strong>Schedule at:</strong>
   <%= @message.published_at %>
-</p>
-
-<p>
-  <strong>Read:</strong>
-  <%= @message.read %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @message.user %>
 </p>
 
 <%= link_to 'Edit', edit_message_path(@message) %> |
