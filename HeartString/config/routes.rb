@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   root to: "welcome#index"
 
-  devise_for :users
+  devise_for :users, :path_prefix => 'd'
+  resources :users, :only => [:show]
+
   resources :messages
   resources :families
   resources :roles
@@ -13,6 +15,9 @@ Rails.application.routes.draw do
   get 'messages/show'
   get 'messages/edit'
   get 'messages/create'
+
+
+
 
 end
 

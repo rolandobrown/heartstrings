@@ -14,6 +14,14 @@ gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 #add sprockets rails
 gem 'sprockets-rails', '~> 2.3.2'
 
+#paperclip file uploader.
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+
+#add cancancan
+gem 'cancancan', '~> 1.10'
+
+#add rolify
+gem 'rolify'
 
 #add simple form
 gem 'simple_form'
