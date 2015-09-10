@@ -1,3 +1,10 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+change_visibility = (status) ->
+  if status == "Schedule"
+    $(".published-field").show()
+  else
+    $(".published-field").hide()
+
+jQuery ->
+  change_visibility $("#message_status :selected").text()
+  $("#message_status").on "change", (e) ->
+    change_visibility $(this).find(":selected").text()
