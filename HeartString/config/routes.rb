@@ -4,10 +4,6 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :messages
-  resources :families
-  resources :roles
-  resources :keepsakes
-  resources :requests
 
   get 'messages/index'
   get 'messages/show'
