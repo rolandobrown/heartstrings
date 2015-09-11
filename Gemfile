@@ -6,7 +6,6 @@ gem 'whenever', require: false
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
 
-#
 # #add bootstrap
 gem 'bootstrap-sass', '~> 3.3.5'
 #

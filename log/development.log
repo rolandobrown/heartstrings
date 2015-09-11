@@ -17081,6 +17081,7 @@ ActionController::RoutingError (No route matches [GET] "/particles.js"):
   Rendered /Users/rolandobrown/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/rolandobrown/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
   Rendered /Users/rolandobrown/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (123.3ms)
+<<<<<<< HEAD
 
 
 Started GET "/" for 127.0.0.1 at 2015-09-11 18:37:06 -0400
@@ -20429,3 +20430,20 @@ Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (0.3ms)
   Rendered layouts/_user_header.html.erb (0.7ms)
 Completed 200 OK in 575ms (Views: 574.0ms | ActiveRecord: 0.0ms)
+=======
+>>>>>>> 262ae1ba573528424cbfeb58c4a21ec5c318d521
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-11 19:49:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_user_header.html.erb (4.8ms)
+Completed 200 OK in 1083ms (Views: 1050.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-11 19:49:46 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_user_header.html.erb (0.4ms)
+Completed 200 OK in 209ms (Views: 207.8ms | ActiveRecord: 0.0ms)
