@@ -6,12 +6,12 @@ gem 'whenever', require: false
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
 
-#add bootstrap
+#
+# #add bootstrap
 gem 'bootstrap-sass', '~> 3.3.5'
-
-#add bootstrap 4
-gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
-
+#
+# #add bootstrap 4
+# gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 
 #Bower Rails
 gem "bower-rails", "~> 0.10.0"
