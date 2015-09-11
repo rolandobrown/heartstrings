@@ -21,4 +21,13 @@ class Message < ActiveRecord::Base
                         end
     true
   end
+
+  def time_to_delivery
+    diff = DateTime.parse("#{self.published_at}").to_time - Time.zone.now.to_time
+    time_to_delivery_in_hours = diff / 3600
+    time_to_delivery_in_days = time_to_delivery_in_hours / 24
+    time_to_delivery_in_days.round
+    return "Approx #{time_to_delivery_in_days.round} days until this heartstring is delivered! Yah!"
+  end
+
 end
