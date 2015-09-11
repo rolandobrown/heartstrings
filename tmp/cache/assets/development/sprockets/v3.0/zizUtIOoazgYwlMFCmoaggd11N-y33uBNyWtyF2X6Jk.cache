@@ -1,0 +1,20 @@
+I"Ð(function() {
+  var change_visibility;
+
+  change_visibility = function(status) {
+    if (status === "Schedule") {
+      return $(".published-field").show();
+    } else {
+      return $(".published-field").hide();
+    }
+  };
+
+  jQuery(function() {
+    change_visibility($("#message_status :selected").text());
+    return $("#message_status").on("change", function(e) {
+      return change_visibility($(this).find(":selected").text());
+    });
+  });
+
+}).call(this);
+:ET
