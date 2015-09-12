@@ -7,7 +7,6 @@
   <tbody>
     <% @messages.each do |message| %>
       <tr>
-        <td><%= message.sender_id %></td>
         <td><%= message.receiver_id %></td>
         <td><%= message.subject %></td>
         <td><%= message.body %></td>
@@ -19,6 +18,7 @@
       </tr>
     <% end %>
   </tbody>
+
 </table>
 
 <br>
