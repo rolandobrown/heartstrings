@@ -21,9 +21,5 @@
 #   rake "whatever"
 # end
 
-every 1.minutes do
-  rake "whatever"
-end
-
 
 # Learn more: http://github.com/javan/whenever

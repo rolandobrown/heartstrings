@@ -23168,3 +23168,395 @@ Processing by WelcomeController#index as HTML
   [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
   Rendered layouts/_user_header.html.erb (2.0ms)
 Completed 200 OK in 160ms (Views: 159.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-09-12 12:40:49 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 38ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-12 12:40:49 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_user_header.html.erb (2.5ms)
+Completed 200 OK in 341ms (Views: 339.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-12 23:15:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (4.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_user_header.html.erb (5.8ms)
+Completed 200 OK in 1075ms (Views: 1051.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-12 23:15:10 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_user_header.html.erb (0.4ms)
+Completed 200 OK in 142ms (Views: 142.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-12 23:15:26 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_user_header.html.erb (0.7ms)
+Completed 200 OK in 197ms (Views: 196.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-12 23:15:28 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_user_header.html.erb (0.4ms)
+Completed 200 OK in 165ms (Views: 164.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-09-12 23:15:32 -0400
+Processing by Users::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (398.1ms)
+  Rendered layouts/_user_header.html.erb (0.4ms)
+Completed 200 OK in 611ms (Views: 587.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-09-12 23:15:37 -0400
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4ZLYUOwlJA7xTaboZrN15yr7E3KfTWidCegr74MJrcIKRUCbJbTG9aWN6R6NFVWq/ga/SXUBqmlDJnXLEQKr4Q==", "user"=>{"email"=>"ko.stacey@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (2.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ko.stacey@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2015-09-13 03:15:37.649324"], ["sign_in_count", 2], ["updated_at", "2015-09-13 03:15:37.650266"], ["id", 10]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 138ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-12 23:15:37 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered layouts/_user_header.html.erb (1.6ms)
+Completed 200 OK in 156ms (Views: 155.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:15:42 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (2.2ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (14.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered layouts/_user_header.html.erb (2.6ms)
+Completed 200 OK in 193ms (Views: 175.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:20:44 -0400
+Processing by MessagesController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/staceyko/heartstrings/app/models/message.rb:37: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/models/message.rb:37: syntax error, unexpected end-of-input, expecting keyword_end
+  app/controllers/messages_controller.rb:7:in `index'
+
+
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.5ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (70.8ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (144.2ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:20:58 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.3ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `gsub' for -1:Fixnum):
+    11:         <td><%= message.subject %></td>
+    12:         <td><%= message.body %></td>
+    13:         <td><%= message.published_at.strftime("%m/%d/%Y %I:%M%p") %></td>
+    14:         <td><%= message.time_to_delivery %></td>
+    15:         <td><%= link_to 'Show', message %></td>
+    16:         <td><%= link_to 'Edit', edit_message_path(message) %></td>
+    17:         <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/models/message.rb:32:in `time_to_delivery'
+  app/views/messages/index.html.erb:14:in `block in _app_views_messages_index_html_erb___1109171964273101917_70353171959960'
+  app/views/messages/index.html.erb:8:in `_app_views_messages_index_html_erb___1109171964273101917_70353171959960'
+
+
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.5ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.6ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.3ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:21:14 -0400
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (undefined method `gsub' for -1.1953056553703705:Float):
+    11:         <td><%= message.subject %></td>
+    12:         <td><%= message.body %></td>
+    13:         <td><%= message.published_at.strftime("%m/%d/%Y %I:%M%p") %></td>
+    14:         <td><%= message.time_to_delivery %></td>
+    15:         <td><%= link_to 'Show', message %></td>
+    16:         <td><%= link_to 'Edit', edit_message_path(message) %></td>
+    17:         <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/models/message.rb:32:in `time_to_delivery'
+  app/views/messages/index.html.erb:14:in `block in _app_views_messages_index_html_erb___1109171964273101917_70353171959960'
+  app/views/messages/index.html.erb:8:in `_app_views_messages_index_html_erb___1109171964273101917_70353171959960'
+
+
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.7ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.1ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (105.2ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:21:41 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.3ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `-' for "Message has been sent '-1.1956142899768518.gsub(":String):
+    11:         <td><%= message.subject %></td>
+    12:         <td><%= message.body %></td>
+    13:         <td><%= message.published_at.strftime("%m/%d/%Y %I:%M%p") %></td>
+    14:         <td><%= message.time_to_delivery %></td>
+    15:         <td><%= link_to 'Show', message %></td>
+    16:         <td><%= link_to 'Edit', edit_message_path(message) %></td>
+    17:         <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/models/message.rb:32:in `time_to_delivery'
+  app/views/messages/index.html.erb:14:in `block in _app_views_messages_index_html_erb___1109171964273101917_70353171959960'
+  app/views/messages/index.html.erb:8:in `_app_views_messages_index_html_erb___1109171964273101917_70353171959960'
+
+
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.8ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (102.0ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:21:47 -0400
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.4ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_user_header.html.erb (12.7ms)
+Completed 200 OK in 179ms (Views: 172.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:22:01 -0400
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.3ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_user_header.html.erb (14.9ms)
+Completed 200 OK in 239ms (Views: 232.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:22:11 -0400
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.3ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_user_header.html.erb (12.2ms)
+Completed 200 OK in 191ms (Views: 184.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:22:13 -0400
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_user_header.html.erb (1.7ms)
+Completed 200 OK in 162ms (Views: 161.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:22:47 -0400
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.4ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `gsub' for -1:Fixnum):
+    11:         <td><%= message.subject %></td>
+    12:         <td><%= message.body %></td>
+    13:         <td><%= message.published_at.strftime("%m/%d/%Y %I:%M%p") %></td>
+    14:         <td><%= message.time_to_delivery %></td>
+    15:         <td><%= link_to 'Show', message %></td>
+    16:         <td><%= link_to 'Edit', edit_message_path(message) %></td>
+    17:         <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/models/message.rb:29:in `time_to_delivery'
+  app/views/messages/index.html.erb:14:in `block in _app_views_messages_index_html_erb___1109171964273101917_70353171959960'
+  app/views/messages/index.html.erb:8:in `_app_views_messages_index_html_erb___1109171964273101917_70353171959960'
+
+
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (107.6ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:23:34 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.6ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (undefined method `gsub' for -1:Fixnum):
+    11:         <td><%= message.subject %></td>
+    12:         <td><%= message.body %></td>
+    13:         <td><%= message.published_at.strftime("%m/%d/%Y %I:%M%p") %></td>
+    14:         <td><%= message.time_to_delivery %></td>
+    15:         <td><%= link_to 'Show', message %></td>
+    16:         <td><%= link_to 'Edit', edit_message_path(message) %></td>
+    17:         <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/models/message.rb:29:in `time_to_delivery'
+  app/views/messages/index.html.erb:14:in `block in _app_views_messages_index_html_erb___1109171964273101917_70353171959960'
+  app/views/messages/index.html.erb:8:in `_app_views_messages_index_html_erb___1109171964273101917_70353171959960'
+
+
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.1ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.7ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.7ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (96.8ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:24:10 -0400
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.3ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_user_header.html.erb (12.3ms)
+Completed 200 OK in 182ms (Views: 176.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:24:26 -0400
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.3ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (9.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_user_header.html.erb (10.6ms)
+Completed 200 OK in 245ms (Views: 238.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:24:58 -0400
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.3ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (10.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_user_header.html.erb (11.4ms)
+Completed 200 OK in 189ms (Views: 182.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:25:00 -0400
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_user_header.html.erb (1.3ms)
+Completed 200 OK in 171ms (Views: 169.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:25:02 -0400
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered layouts/_user_header.html.erb (1.2ms)
+Completed 200 OK in 162ms (Views: 161.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:25:06 -0400
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.4ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `gsub' for -1:Fixnum):
+    11:         <td><%= message.subject %></td>
+    12:         <td><%= message.body %></td>
+    13:         <td><%= message.published_at.strftime("%m/%d/%Y %I:%M%p") %></td>
+    14:         <td><%= message.time_to_delivery %></td>
+    15:         <td><%= link_to 'Show', message %></td>
+    16:         <td><%= link_to 'Edit', edit_message_path(message) %></td>
+    17:         <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/models/message.rb:31:in `time_to_delivery'
+  app/views/messages/index.html.erb:14:in `block in _app_views_messages_index_html_erb___1109171964273101917_70353171959960'
+  app/views/messages/index.html.erb:8:in `_app_views_messages_index_html_erb___1109171964273101917_70353171959960'
+
+
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (68.5ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (79.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/staceyko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (138.5ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-09-12 23:25:11 -0400
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (12.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered layouts/_user_header.html.erb (12.4ms)
+Completed 200 OK in 232ms (Views: 218.3ms | ActiveRecord: 1.7ms)

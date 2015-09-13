@@ -2,7 +2,7 @@
 task :update_published_at => :environment do
  time = Time.zone.now
  messages = Message.scheduled.where(published_at: (time.beginning_of_day..time.end_of_day))
- messages.update_all(status: "Send Now")
+ messages.update_all(status: "Sent!")
 end
 
 #update sent boolean to true

@@ -27,7 +27,12 @@ class Message < ActiveRecord::Base
     time_to_delivery_in_hours = diff / 3600
     time_to_delivery_in_days = time_to_delivery_in_hours / 24
     time_to_delivery_in_days.round
-    return "Approx #{time_to_delivery_in_days.round} days until this heartstring is delivered! Yah!"
+
+    if time_to_delivery_in_days.round < 0
+      return "Message has been sent!"
+    else
+    return "Approx #{delivery} days until this heartstring is delivered! Yah!"
+    end
   end
 
 end
