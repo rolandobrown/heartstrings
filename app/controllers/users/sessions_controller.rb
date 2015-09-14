@@ -3,18 +3,21 @@ class Users::SessionsController < Devise::SessionsController
 # before_filter :configure_account_update_params, only: [:update]
 
 #   GET /resource/sign_in
-#   def new
-#     super
-#   end
+  # def new
+  #
+  # end
 #
-#   POST /resource/sign_in
-#   def create
-#     super
-#   end
+  # POST /resource/sign_in
+  # def create
+  #   if params[:redirect_to].present?
+  #     store_location_for(resource, params[:redirect_to])
+  #   end
+  # end
 #
 #   DELETE /resource/sign_out
 #   def destroy
 #     super
+
 #   end
 #
 #   protected

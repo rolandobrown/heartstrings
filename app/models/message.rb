@@ -2,6 +2,8 @@ class Message < ActiveRecord::Base
   belongs_to :sender, :class_name => "User"
   belongs_to :receiver, :class_name => "User"
 
+  validates :receiver, :subject, :body,  presence: true
+
   scope :draft,     ->{ where(status: "Draft") }
   scope :send_now,  ->{ where(status: "Send Now") }
   scope :scheduled, ->{ where(status: "Scheduled") }
@@ -31,7 +33,7 @@ class Message < ActiveRecord::Base
     if time_to_delivery_in_days.round < 0
       return "Message has been sent!"
     else
-    return "Approx #{delivery} days until this heartstring is delivered! Yah!"
+      return "Approx #{time_to_delivery_in_days.round} day(s) until this heartstring is delivered! Yah!"
     end
   end
 

@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>To:</strong>
+  <%= @message.receiver.name %>
+</p>
+
+<p>
   <strong>Subject:</strong>
   <%= @message.subject %>
 </p>

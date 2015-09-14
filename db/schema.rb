@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 20150912001645) do
     t.datetime "dob"
     t.text     "bio"
     t.text     "role"
-    t.integer  "family_id"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "email",                  default: "", null: false
@@ -48,7 +47,6 @@ ActiveRecord::Schema.define(version: 20150912001645) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["family_id"], name: "index_users_on_family_id"
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

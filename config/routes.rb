@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root to: "welcome#index"
 
   devise_for :users, controllers: { sessions: "users/sessions"}
+  devise_for :messages, controllers: { registrations: "registrations" }
+
+  resources :conversations, only: [:index, :show, :destroy]
 
   resources :messages
 
