@@ -7,11 +7,12 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Welcome to HeartStrings!')
   end
 
-  def send_message(receiver)
-     @receiver = receiver
-     mail( :to => @receiver.email,
-     :subject => @message.subject,
-     :body => @message.body)
+  def send_message(message)
+     @receiver = message.receiver
+     mail(:to => receiver.email,
+     :from => message.sender,
+     :subject => message.subject,
+     :body => message.body)
    end
 
 end
