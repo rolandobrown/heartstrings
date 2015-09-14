@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
   has_many :messages, :foreign_key => 'receiver_id'
   has_many :messages, :foreign_key => 'sender_id'
 
+  validates :email, uniqueness: true
+
 end

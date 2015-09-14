@@ -29,13 +29,21 @@ a:hover {
  */
 
 html,
+body.welcome {
+  height: 100%;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  text-align: center;
+  background-color: #8e388e;
+  background-image: url("background.png");
+  background-repeat: repeat;
+}
 body.container {
   height: 100%;
   background-color: #8e388e;
   color: #fff;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
   text-align: center;
-  background-color: #8e388e;
 }
 
 .field{
@@ -54,9 +62,6 @@ body.container {
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
-  background-image: url("images/background.png");
-  background-repeat: repeat-y;
-
 }
 .cover-container {
   margin-right: auto;

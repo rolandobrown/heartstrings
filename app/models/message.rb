@@ -2,7 +2,7 @@ class Message < ActiveRecord::Base
   belongs_to :sender, :class_name => "User"
   belongs_to :receiver, :class_name => "User"
 
-  validates :receiver, :subject, :body,  presence: true
+  validates :receiver_id, :sender_id, :subject, :body,  presence: true
 
   scope :draft,     ->{ where(status: "Draft") }
   scope :send_now,  ->{ where(status: "Send Now") }
