@@ -1,4 +1,4 @@
-class UserMailer < ApplicationMailer::Base
+class UserMailer < ApplicationMailer
   default from: 'hello@heartstrings.io'
 
   def welcome_email(user)

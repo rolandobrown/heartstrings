@@ -42,8 +42,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-#use Thin as server
-gem 'thin', '~> 1.6.3'
+#use Puma as server
+gem 'puma'
 
 # Adds methods to set and authenticate against a BCrypt password.
 gem 'bcrypt', '~> 3.1.7'
