@@ -1089,7 +1089,7 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 16px;
   line-height: 1.42857143;
-  color: #333333;
+  color: #ffffff;
   background-color: #ffffff;
 }
 input,
@@ -1299,10 +1299,12 @@ p {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.4;
+  color: #fff;
 }
 @media (min-width: 768px) {
   .lead {
     font-size: 24px;
+    color: #fff;
   }
 }
 small,
