@@ -19,7 +19,7 @@
 task :send_eligible_messages => :environment do
   messages = Message.where("published_at > ?", DateTime.now).where(sent: nil)
   messages.each do |message|
-    UserMailer.send_message(@user).deliver
     message.update(sent: true)
+    UserMailer.send_message(@user).deliver
   end
 end
