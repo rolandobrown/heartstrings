@@ -24,9 +24,14 @@ class MessagesController < ApplicationController
 
   # POST /messages
   # POST /messages.json
+
   def create
     @message = Message.new(message_params)
     @message.sender = current_user
+    recipient = User.where(id: params[:receiver_id])
+    conversation = current_user.send_message(recipient, params[:message][:body], params[:message][:subject]).conversation
+    flash[:success] = "Message has been sent!"
+    redirect_to messages_path
 
     respond_to do |format|
       if @message.save

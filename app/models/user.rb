@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :messages, :foreign_key => 'receiver_id'
   has_many :messages, :foreign_key => 'sender_id'
+
+  acts_as_messageable
 end

@@ -8,7 +8,11 @@ gem 'rails', '4.2.4'
 
 # #add bootstrap
 gem 'bootstrap-sass', '~> 3.3.5'
-#
+
+gem 'bootstrap-will_paginate'
+gem 'will_paginate'
+
+gem 'mailboxer'
 # #add bootstrap 4
 # gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 
@@ -69,6 +73,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'sqlite3'
+  gem 'pry'
 end
 
 group :development do

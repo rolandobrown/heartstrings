@@ -7,7 +7,8 @@
   <tbody>
     <% @messages.each do |message| %>
       <tr>
-        <td><%= message.receiver_id %></td>
+        <td><%= message.receiver.name %></td>
+        <td><%= message.sender.name %></td>
         <td><%= message.subject %></td>
         <td><%= message.body %></td>
         <td><%= message.published_at.strftime("%m/%d/%Y %I:%M%p") %></td>
