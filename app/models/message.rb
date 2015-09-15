@@ -32,13 +32,13 @@ class Message < ActiveRecord::Base
     time_to_delivery_in_days.round
 
     if time_to_delivery_in_mins.round < 0
-      return "#{time_to_delivery_in_mins.round} min(s) ago"
+      return "#{time_to_delivery_in_mins.round.abs} min(s) ago"
     elsif time_to_delivery_in_mins.round < 60 && time_to_delivery_in_hours.round < 1
       return "#{time_to_delivery_in_mins.round} min(s)"
     elsif time_to_delivery_in_hours.round < 24
-      return "#{time_to_delivery_in_hours.round} hour(s)"
+      return "in #{time_to_delivery_in_hours.round} hour(s)"
     else
-      return "#{time_to_delivery_in_days.round} day(s)"
+      return "in #{time_to_delivery_in_days.round} day(s)"
     end
   end
 

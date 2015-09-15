@@ -1,3 +1,18 @@
+/* table*/
+
+.panel-body {
+    background-image: none;
+    background-color: #fff;
+    color: #333;
+
+}
+
+/* table*/
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #666;
+}
+
 /*flash*/
 .alert-error {
     background-color: #fff;
@@ -14,7 +29,7 @@
  }
 
 .alert-success {
-    background-color: #fff;
+    background-color: #A071A7;
     border-color: #f9d5dd;
     color: #333;
     text-align: left;

@@ -1319,6 +1319,10 @@ mark,
 .text-left {
   text-align: left;
 }
+
+.tabbed {
+  margin-left: 20px;
+}
 .text-right {
   text-align: right;
 }

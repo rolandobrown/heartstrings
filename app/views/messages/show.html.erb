@@ -1,24 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<div class="site-wrapper inner">
+
+<p class="lead text-left">
   <strong>To:</strong>
   <%= @message.receiver.name %>
 </p>
 
-<p>
+<p class="lead text-left">
   <strong>Subject:</strong>
   <%= @message.subject %>
 </p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @message.body %>
+<p class="lead text-left">
+    <strong>HeartString:</strong>
 </p>
 
-<p>
-  <strong>Scheduled to be sent on:</strong>
-  <%= @message.published_at %>
+<div class="panel panel-default lead text-left">
+  <div class="panel-body">
+    <p> Dear <%= @message.receiver.name %>, </p>
+    <p class "tabbed"> <%= @message.body %><p>
+  </div>
+</div>
+
+<p class="lead text-left">
+  <strong>Delivered:</strong>
+  <%= @message.time_to_delivery %>
 </p>
 
-<%= link_to 'Edit', edit_message_path(@message) %> |
-<%= link_to 'Back', messages_path %>
+<p class="lead text-left">
+
+  <% if @message.published_at > Time.zone.now %>
+    <%= link_to 'Edit', edit_message_path(@message) %> |
+    <%= link_to 'Back', messages_path %>
+  <% else %>
+    <%= link_to 'Back', messages_path %>
+  <% end %>
+<p>
+
+</div>
