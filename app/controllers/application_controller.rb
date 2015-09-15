@@ -7,14 +7,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   # before_action :authenticate_user!
 
-
   def after_sign_in_path_for(resource)
-   sign_in_url = 'http://www.heartstrings.io/users/sign_in'
-   sign_up_url = 'http://www.heartstrings.io/users/sign_up'
-   if request.referer == sign_in_url || request.referer == sign_up_url
+    sign_up_url = new_user_registration_url
+    sign_in_url = new_user_session_url
+   if (request.referer == sign_in_url) || (request.referer == sign_up_url)
      new_message_path
    else
-     stored_location_for(resource) || request.referer || root_path
+     request.referer || stored_location_for(resource) || root_path
    end
   end
 

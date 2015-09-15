@@ -18,17 +18,19 @@
   </thead>
   <tbody>
     <% @messages.each do |message| %>
-      <tr>
-        <td><%= message.receiver.name %></td>
-        <td><%= message.sender.name %></td>
-        <td><%= message.subject %></td>
-        <td><%= message.body %></td>
-        <td><%= message.published_at.strftime("%m/%d/%Y %I:%M%p") %></td>
-        <td><%= message.time_to_delivery %></td>
-        <td><%= link_to 'Show', message %></td>
-        <td><%= link_to 'Edit', edit_message_path(message) %></td>
-        <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% if current_user.id == message.sender_id %>
+        <tr>
+          <td><%= message.receiver.name %></td>
+          <td><%= message.sender.name %></td>
+          <td><%= message.subject %></td>
+          <td><%= message.body %></td>
+          <td><%= message.published_at.strftime("%m/%d/%Y %I:%M%p") %></td>
+          <td><%= message.time_to_delivery %></td>
+          <td><%= link_to 'Show', message %></td>
+          <td><%= link_to 'Edit', edit_message_path(message) %></td>
+          <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
