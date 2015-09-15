@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   helper_method :status_for
-  before_action :set_time_zone
+  helper_method :set_time_zone
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
