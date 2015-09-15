@@ -4,7 +4,7 @@
 
 <table class="table table-striped table-hover ">
   <thead>
-    <tr class="info">
+    <tr>
       <th>To:</th>
       <th>From:</th>
       <th>Subject:</th>
@@ -35,6 +35,4 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'Compose', new_message_path %>
+<%= link_to 'Compose', new_message_path, :class => 'btn btn-lg btn-default' %>
