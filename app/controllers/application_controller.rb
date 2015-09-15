@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_filter :set_user_time_zone
   helper_method :status_for
 
   # Prevent CSRF attacks by raising an exception.
@@ -32,8 +33,16 @@ class ApplicationController < ActionController::Base
   protected
 
     def configure_permitted_parameters
-      devise_parameter_sanitizer.for(:sign_up) << :username
-      devise_parameter_sanitizer.for(:sign_up) << :name
-      devise_parameter_sanitizer.for(:sign_up) << :email
+      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :name, :email, :password, :password_confirmation, :time_zone) }
+      # devise_parameter_sanitizer.for(:sign_up) << :username
+      # devise_parameter_sanitizer.for(:sign_up) << :name
+      # devise_parameter_sanitizer.for(:sign_up) << :email
+      # devise_parameter_sanitizer.for(:sign_up) << :password
+      # devise_parameter_sanitizer.for(:sign_up) << :password_confirmation
+      # devise_parameter_sanitizer.for(:sign_up) << :time_zone
+    end
+
+    def set_user_time_zone
+      Time.zone = current_user.time_zone if user_signed_in?
     end
 end
