@@ -10,17 +10,19 @@
 <% end %>
 
 
-<p class="nav nav-pills">
+<p class="nav navbar-nav navbar-right">
 
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
 
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'dropdown-toggle' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'dropdown-toggle'  %> |
-  <%= link_to "Write", new_message_path, :class => 'dropdown-toggle'  %>
-  <%= link_to 'Read', edit_user_registration_path, :class => 'dropdown-toggle' %> |
+  <%= link_to 'Edit profile', edit_user_registration_path %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete  %> |
+  <%= link_to "Write", new_message_path %> |
+  <%= link_to 'Read', edit_user_registration_path %> |
 <% else %>
   <%= link_to "Home", root_path  %> |
-  <%= link_to "Sign up", new_user_registration_path, :class => 'dropdown-toggle'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'dropdown-toggle'  %>
+  <%= link_to "Sign up", new_user_registration_path  %> |
+  <%= link_to "Login", new_user_session_path %>
 <% end %>
+
+<!-- link_to 'Edit profile', edit_user_registration_path, :class => 'nav navbar-nav' -->
