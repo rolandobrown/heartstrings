@@ -198,11 +198,17 @@ body.container {
 
   .pulse_holder
   {
-    display: inline-block;
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -15%);
+    position: relative;
+    width: 100%;
+    clear: both;
+  }
+
+  div.center
+  {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .pulse_holder .pulse_marker
@@ -316,15 +322,15 @@ body.container {
   /* ---- particles.js container ---- */
   /* ---- reset ---- */
 
-  body {
-    margin: 0;
-    font:normal 75% Arial, Helvetica, sans-serif;
-  }
-
-  canvas {
-    display: block;
-    vertical-align: bottom;
-  }
+  // body {
+  //   margin: 0;
+  //   font:normal 75% Arial, Helvetica, sans-serif;
+  // }
+  //
+  // canvas {
+  //   display: block;
+  //   vertical-align: bottom;
+  // }
 
   /* ---- particles.js container ---- */
 
