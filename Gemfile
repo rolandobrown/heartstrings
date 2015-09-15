@@ -12,6 +12,8 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'bootstrap-will_paginate'
 gem 'will_paginate'
 
+#send emails
+gem "dotenv-rails"
 gem 'sendgrid'
 
 # gem 'mailboxer'
