@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   helper_method :status_for
-  helper_method :set_time_zone
+
+  helper_method :set_user_time_zone, :set_session_tz_offset_for_user
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -30,6 +31,29 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def set_session_tz_offset_for_user
+    Warden::Manager.after_authentication do |user, auth, opts|
+      if (params[:user])
+        user.session_tz_offset = params[:user][:session_tz_offset]
+        user.save
+      end
+    end
+  end
+
+  def set_user_time_zone
+    if (user_signed_in?)
+      if(user_session[:time_zone])
+        Time.zone = user_session[:time_zone]
+      else
+        user_session[:time_zone] =
+            ActiveSupport::TimeZone.[](current_user.session_tz_offset)
+        Time.zone = user_session[:time_zone]
+      end
+    else
+      Time.zone = config.time_zone
+    end
+  end
+
   protected
 
     def configure_permitted_parameters
@@ -42,6 +66,10 @@ class ApplicationController < ActionController::Base
       # devise_parameter_sanitizer.for(:sign_up) << :password_confirmation
       # devise_parameter_sanitizer.for(:sign_up) << :time_zone
     end
+
+    before_filter :set_time_zone
+
+    private
 
     def set_time_zone
       if current_user
