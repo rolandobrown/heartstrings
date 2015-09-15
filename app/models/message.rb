@@ -26,14 +26,19 @@ class Message < ActiveRecord::Base
 
   def time_to_delivery
     diff = DateTime.parse("#{self.published_at}").to_time - Time.zone.now.to_time
+    time_to_delivery_in_mins = diff / 60
     time_to_delivery_in_hours = diff / 3600
     time_to_delivery_in_days = time_to_delivery_in_hours / 24
     time_to_delivery_in_days.round
 
-    if time_to_delivery_in_days.round < 0
-      return "Message has been sent!"
+    if time_to_delivery_in_mins.round < 0
+      return "#{time_to_delivery_in_mins.round} min(s) ago"
+    elsif time_to_delivery_in_mins.round < 60 && time_to_delivery_in_hours.round < 1
+      return "#{time_to_delivery_in_mins.round} min(s)"
+    elsif time_to_delivery_in_hours.round < 24
+      return "#{time_to_delivery_in_hours.round} hour(s)"
     else
-      return "Approx #{time_to_delivery_in_days.round} day(s) until this heartstring is delivered! Yah!"
+      return "#{time_to_delivery_in_days.round} day(s)"
     end
   end
 

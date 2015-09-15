@@ -2,25 +2,26 @@
 
 <h1>Your HeartStrings</h1>
 
-<table class="table table-striped table-hover ">
+<table class="table table-hover ">
+
   <thead>
-    <tr>
+    <tr text-left>
       <th>To:</th>
       <th>From:</th>
       <th>Subject:</th>
       <th>Message:</th>
       <th>Scheduled Date:</th>
-      <th>Status:</th>
+      <th>Delivered:</th>
       <th>Actions:</th>
       <th></th>
       <th></th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="text-left">
     <% @messages.each do |message| %>
       <% if current_user.id == message.sender_id %>
         <tr>
-          <td><%= message.receiver.name %></td>
+          <td><%= message.receiver.name%></td>
           <td><%= message.sender.name %></td>
           <td><%= message.subject %></td>
           <td><%= message.body %></td>
