@@ -45024,3 +45024,4 @@ Processing by MessagesController#new as HTML
   [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
   Rendered layouts/_user_header.html.erb (1.5ms)
 Completed 200 OK in 235ms (Views: 233.5ms | ActiveRecord: 0.4ms)
+  [1m[36mMessage Load (29.2ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
