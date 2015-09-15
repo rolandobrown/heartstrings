@@ -1,23 +1,26 @@
-  <div class="pulse_holder center" >
-    <div class="pulse_marker">
-      <div class="pulse_rays"></div>
-    </div>
-  </div>
-
 <div class="site-wrapper">
   <div class="site-wrapper-inner">
+
+    <div class="pulse_holder center" >
+      <div class="pulse_marker">
+        <div class="pulse_rays"></div>
+      </div>
+    </div>
+
     <div class="cover-container">
       <div class="inner cover">
         <h1 class="cover-heading">Heartstrings</h1>
-        <p class="lead">Send messages to your loved ones.<br>
-          Deliver them right on time.
-        </p>
-         <p class="lead">
-          <%= link_to "Sign Up", new_user_registration_path, :class => 'btn btn-lg btn-default' %>
-        </p>
-      </div>
-      <div class="mastfoot">
-          <p>Created by Stacey Ko and Rolando Brown</p>
+          <p class="lead">Send messages to loved ones.<br>
+                      Deliver them right on time.</p>
+          <p class="lead">
+            <%= link_to "Sign Up", new_user_registration_path, :class => 'btn btn-lg btn-default' %>
+          </p>
+          <p>
+            <%= link_to "Login", new_user_session_path %>
+          </p>
+        </div>
+        <div class="mastfoot">
+        <p>By Stacey Ko + Rolando Brown</p>
       </div>
     </div>
   </div>

@@ -17,16 +17,9 @@
 # end
 
 task :send_eligible_messages => :environment do
-  messages = Message.where("published_at > ?", Time.zone.now)
+  messages = Message.where("published_at > ?", Time.zone.now).where(sent: nil)
   messages.each do |message|
     UserMailer.send_message(message).deliver
+    message.update(sent: true)
   end
 end
-
-# task :send_eligible_messages => :environment do
-#   messages = Message.where("published_at > ?", Time.zone.now).where(sent: nil)
-#   messages.each do |message|
-#     message.update(sent: true)
-#     UserMailer.send_message(message).deliver
-#   end
-# end
